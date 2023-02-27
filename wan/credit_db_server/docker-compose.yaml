@@ -1,0 +1,27 @@
+version: '3.1'
+
+services:
+  db_postgres:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: example
+    networks:
+      - test_network
+
+  fastapi_example:
+    build:
+      dockerfile: Dockerfile
+    depends_on:
+      - db_postgres
+    ports:
+      - 81:80
+    volumes:
+      - type: bind
+        source: ./
+        target: /app
+    networks:
+      - test_network
+
+networks:
+  test_network:
+    driver: bridge
