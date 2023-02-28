@@ -19,8 +19,8 @@ def read_client_info():
 @app.get("/get_user_credit_info/{name}")
 def read_item(name: str, q: Union[str, None] = None):
     
-    user_info = requests.get(f'http://10.28.157.4/user_info/{name}').json()
-    credit_card_info = requests.get(f'http://10.28.157.4:81/credit_info/{user_info["credit_card_id"]}').json()
+    user_info = requests.get(f'http://10.0.0.142/user_info/{name}').json()
+    credit_card_info = requests.get(f'http://10.0.0.142:81/credit_info/{user_info["credit_card_id"]}').json()
     
     return {
         "user_name": name,
