@@ -28,4 +28,3 @@ jobs:
         push: true
         tags: ghcr.io/chanyounghan/home_management_system_gateway:latest
         context: gateway/.
-        github-token: ${{ secrets.TOKEN }}
