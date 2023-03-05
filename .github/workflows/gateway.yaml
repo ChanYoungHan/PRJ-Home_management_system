@@ -27,4 +27,5 @@ jobs:
       with:
         push: true
         tags: ghcr.io/home_management_system/gateway:latest
-        build: gateway/Dockerfile
+        context: .
+        build: gateway/
