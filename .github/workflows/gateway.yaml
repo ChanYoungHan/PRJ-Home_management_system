@@ -26,5 +26,5 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         push: true
-        tags: ghcr.io/${{ github.repository | lower }}/gateway:latest
+        tags: ghcr.io/home_management_system/gateway:latest
         build: gateway/Dockerfile
