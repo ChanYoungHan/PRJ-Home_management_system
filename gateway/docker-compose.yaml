@@ -10,3 +10,4 @@ services:
       - type: bind
         source: ./
         target: /app
+    command: python main.py
